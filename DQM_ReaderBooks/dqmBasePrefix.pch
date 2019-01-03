@@ -1,0 +1,165 @@
+//
+//  dqmBasePrefix.pch
+//  QM_FoldingTableViewDemo
+//
+//  Created by 漂读网 on 2018/12/18.
+//  Copyright © 2018 漂读网. All rights reserved.
+//
+
+#ifndef dqmBasePrefix_pch
+#define dqmBasePrefix_pch
+
+/** 基本的宏定义 ⬇️ */
+
+/* YYcategory有定义了
+ #define kScreenWidth [UIScreen mainScreen].bounds.size.width
+ #define kScreenHeight [UIScreen mainScreen].bounds.size.height
+*/
+
+//尺寸
+#define kStatusBarHeight [UIApplication sharedApplication].statusBarFrame.size.height
+
+#define kDefaultNavBarHeight ([UIApplication sharedApplication].statusBarFrame.size.height + 44.0)
+
+#define kSmallTouchSizeHeight 44.0
+
+#define kLeftRightViewSizeMinWidth 60.0
+
+#define kLeftMargin 0.0
+
+#define kRightMargin 0.0
+
+#define kNavBarCenterY(H) ((self.frame.size.height - kStatusBarHeight - H) * 0.5 + kStatusBarHeight)
+
+#define kViewMargin 5.0
+
+
+#define QMWeak(type)  __weak typeof(type) weak##type = type
+
+#define QMKeyPath(obj, key) @(((void)obj.key, #key)) /**  属性转字符串*/
+
+#define kDegreesToRadian(x)      (M_PI * (x) / 180.0)/** 由角度转换弧度 */
+
+#define kRadianToDegrees(radian) (radian * 180.0) / (M_PI)/** 由弧度转换角度 */
+
+#define QMIsEmpty(_object) (_object == nil \
+|| [_object isKindOfClass:[NSNull class]] \
+|| ([_object respondsToSelector:@selector(length)] && [(NSData *)_object length] == 0) \
+|| ([_object respondsToSelector:@selector(count)] && [(NSArray *)_object count] == 0))      /* 是否是空对象 */
+
+//随机色
+#define QMHexColor(color)  [UIColor colorWithHexString:color]
+#define QMRandomColor [UIColor colorWithRed:arc4random_uniform(256)/255.0 green:arc4random_uniform(256)/255.0 blue:arc4random_uniform(256)/255.0 alpha:1.0]
+#define QMTextColor QMHexColor(@"24292d")
+
+
+/**  设置字体*/
+#define kQmFont(font) [UIFont systemFontOfSize:(font)]
+#define kQmBoldFont(font) [UIFont boldSystemFontOfSize:(font)]
+
+/**  设置图片 */
+#define QMSetImage(imageView,imageName) [(imageView) setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",(imageName)]]]
+#define QMImage(imageName) [UIImage imageNamed:[NSString stringWithFormat:@"%@",(imageName)]]
+/**  按钮设置 */
+
+#define QMSetButton(button,title,font,imageName,titleColor,state)\
+\
+[button setImage:[UIImage imageNamed:[NSString stringWithFormat:@"%@",(imageName)]] forState:state];\
+[button setTitle:title forState:state];\
+[button setTitleColor:titleColor forState:state];\
+[button.titleLabel setFont:[UIFont systemFontOfSize:font]]
+
+/**  设置字体 */
+#define KQMFont(font) [UIFont systemFontOfSize:(font)]
+
+
+/**  自定义圆角 */
+#define QMViewBorderRadius(View, Radius, Width, Color)\
+\
+[View.layer setCornerRadius:(Radius)];\
+[View.layer setBorderWidth:(Width)];\
+[View.layer setBorderColor:[Color CGColor]];\
+[View.layer setMasksToBounds:YES] //尽量不用，否则影响性能
+
+/**  自定义label */
+#define QMLabelFontColorText(label, text, textColor, Font)\
+\
+[label setText: (text)];\
+[label setTextColor: (textColor)];\
+[label setFont:[UIFont systemFontOfSize:(Font)]]
+
+
+
+
+/** 适配宏 */
+#define  isIphoneX                      [[UIApplication sharedApplication] statusBarFrame].size.height == 44
+#define  isIphonePlus                   (SCREEN_WIDTH >= 390.f ? YES : NO)
+#define  STATUS_BAR_HEIGHT              [[UIApplication sharedApplication] statusBarFrame].size.height
+#define  TAB_BAR_HEIGHT                 (isIphoneX ? (49.f + 34.f) : 49.f)
+#define  HOME_INDICATOR_HEIGHT          (isIphoneX ? 34.f : 0.f)
+#define  NAVIGATION_BAR_HEIGHT          self.navigationController.navigationBar.frame.size.height + [[UIApplication sharedApplication] statusBarFrame].size.height
+
+/** 不同屏幕尺寸字体适配 */
+#define kScreenWidthRatio  (UIScreen.mainScreen.bounds.size.width / 375.0)
+#define kScreenHeightRatio (UIScreen.mainScreen.bounds.size.height / 667.0)
+#define AdaptedWidth(x)  ceilf((x) * kScreenWidthRatio)
+#define AdaptedHeight(x) ceilf((x) * kScreenHeightRatio)
+#define AdaptedFontSize(R)     [UIFont systemFontOfSize:AdaptedWidth(R)]
+#define AdaptedBoldFont(R)     [UIFont boldSystemFontOfSize:AdaptedWidth(R)]
+
+
+
+
+
+
+
+/** 用到的全局通知的字符常量 避免出错 */
+#import "DQMConst.h"
+
+/** 视图frame扩展出.x .y等 */
+#import "UIView+DQMFrame.h"
+
+/** 常见的按钮点击事件封装和基本创建封装 */
+#import "UIButton+DQM.h"
+
+/** helper 常用通用工具类 */
+#import "QMSGeneralHelpers.h"//通用类
+#import "JXTAlertController.h"//警告弹窗
+
+/** 渐变加载SDwebImage */
+#import "UIImageView+SDwebImageFade.h"
+
+#import "ReactiveObjC.h"  /** 函数响应式编程 */
+
+/** 基本的宏定义 ⤴️ */
+
+
+
+
+
+
+
+
+
+
+/** YY的类扩展 */
+#import "YYCategories.h"
+#import "YYText.h"
+
+/** 网络监察类 */
+#import "Reachability.h"
+
+/** 数据转换 */
+#import "MJExtension.h"
+
+/** 列表刷新 */
+#import "MJRefresh.h"
+
+/** 自动约束autolayout*/
+#import "Masonry.h"
+
+/** 网络图片加载 */
+#import "UIImageView+WebCache.h"
+
+
+#endif /* dqmBasePrefix_pch */

@@ -1,6 +1,7 @@
 # DQM_ReaderBooks
 
-1.解决字体大小变化导致的数组越界
+1.解决问题    
+字体大小变化导致的数组越界
 //重新计算分页    
   [self loadChapterContentWithIndex:_currentChapter];    
   self.currentVC.content = self.pageContentArray[_currentIndex];    
@@ -18,6 +19,13 @@
     DQMReaderContentViewController *vc = self.pageViewController.viewControllers.firstObject;    
     [vc setIndex:_currentIndex totalPages:self.pageContentArray.count];   
   }    
+        
+        
+  翻页手势执行一半放回，下一页的代码却执行了的BUG
+      
+        
+        
+        
   
   2.增加进度记录  未完成    
       

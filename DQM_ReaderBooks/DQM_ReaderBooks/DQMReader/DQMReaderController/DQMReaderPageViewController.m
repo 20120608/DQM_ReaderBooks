@@ -89,31 +89,50 @@
  */
 -(void)initialization {
   
-  DQMReadingHistoryFMDBManager *historyDBManager = [DQMReadingHistoryFMDBManager sharedInstance];
-  if ([historyDBManager openReadHistoryDB]) {//打开
-    
-    //找历史记录
-    DQMReadHistory *oldHistoryModel;
-    oldHistoryModel = [historyDBManager searchDataToReadHistory:_readHistoryModel];
-    if (oldHistoryModel == nil) {
-      NSLog(@"没有记录");
-    } else {
-       NSLog(@"有记录 下标 = %ld  章节 = %ld",oldHistoryModel.currentIndex,oldHistoryModel.currentChapter);
-    }
-  }
-  
-  
   //文字大小 默认20
-  self.textFontSize = [[NSUserDefaults standardUserDefaults]objectForKey:DCTextFontSize];
+  self.textFontSize = [[NSUserDefaults standardUserDefaults] objectForKey:DCTextFontSize];
   if(!self.textFontSize)
   {
     self.textFontSize = [NSString stringWithFormat:@"%d",DCDefaultTextFontSize];
     [[NSUserDefaults standardUserDefaults] setObject:self.textFontSize forKey:DCTextFontSize];
   }
-  
-  _attributeDict = @{NSFontAttributeName:[UIFont fontWithName:DCDefaultTextFontName size:self.textFontSize.intValue]};
   _currentIndex = 0;
   _currentChapter = 0;
+  
+  
+  //取出历史记录
+  DQMReadingHistoryFMDBManager *historyDBManager = [DQMReadingHistoryFMDBManager sharedInstance];
+  if ([historyDBManager OpenOrCreateReadHistoryFMDB]) {//打开
+    //找历史记录
+    DQMReadHistory *oldHistoryModel;
+    oldHistoryModel = [historyDBManager searchDataToReadHistory:_readHistoryModel];
+    if (oldHistoryModel == nil) {
+      NSLog(@"没有记录");
+      //插入
+      DQMReadHistory *newHistoryModel = [[DQMReadHistory alloc] init];
+      newHistoryModel.textFontSize = self.textFontSize;
+      newHistoryModel.name = _readHistoryModel.name;
+      newHistoryModel.path = _readHistoryModel.path;
+      newHistoryModel.type = _readHistoryModel.type;
+      newHistoryModel.currentChapter = 0;
+      newHistoryModel.currentIndex = 0;
+      [historyDBManager insertDataToReadHistory:newHistoryModel];
+    } else {
+      //存在记录
+       NSLog(@"有记录 下标 = %ld  章节 = %ld 字体 = %@",oldHistoryModel.currentIndex,oldHistoryModel.currentChapter,oldHistoryModel.textFontSize);
+      [[NSUserDefaults standardUserDefaults] setObject:oldHistoryModel.textFontSize forKey:DCTextFontSize];
+      //设置数据
+      oldHistoryModel.path = _readHistoryModel.path;//少这一步开发时缓存位置会变 会导致取不到字符串而崩溃
+      _readHistoryModel = oldHistoryModel;
+      self.textFontSize = oldHistoryModel.textFontSize;
+      _currentIndex = oldHistoryModel.currentIndex;
+      _currentChapter = oldHistoryModel.currentChapter;
+      NSLog(@"查询完毕");
+    }
+  }
+  NSLog(@"设置接下去的");
+  
+  _attributeDict = @{NSFontAttributeName:[UIFont fontWithName:DCDefaultTextFontName size:self.textFontSize.intValue]};
   _contentSize = kContentSize;
   self.toolViewShow = NO;
 }
@@ -195,11 +214,28 @@
   contentVC.currentIndex = index;
   contentVC.currentChapter = _currentChapter;
   self.currentVC = contentVC;
+  [self saveUserReadedHistory];//保存记录
   return contentVC;
 }
 
 
-
+/**
+ 保存记录
+ */
+- (void)saveUserReadedHistory {
+ 
+  DQMReadingHistoryFMDBManager *historyDBManager = [DQMReadingHistoryFMDBManager sharedInstance];
+    DQMReadHistory *newHistoryModel = [[DQMReadHistory alloc] init];
+    newHistoryModel.textFontSize = self.textFontSize;
+    newHistoryModel.name = _readHistoryModel.name;
+    newHistoryModel.path = _readHistoryModel.path;
+    newHistoryModel.type = _readHistoryModel.type;
+    newHistoryModel.currentChapter = self.currentVC.currentChapter;
+    newHistoryModel.currentIndex = self.currentVC.currentIndex;
+    //更新
+   BOOL result = [historyDBManager updateDataToReadHistory:newHistoryModel];
+    NSLog(@"更新状态:%@",result ? @"成功" : @"失败");
+}
 
 
 
@@ -255,6 +291,7 @@
   
   [self loadChapterContentWithIndex:_currentChapter];
   self.currentVC.content = self.pageContentArray[_currentIndex];
+  [self saveUserReadedHistory];//保存记录
 }
 
 /**

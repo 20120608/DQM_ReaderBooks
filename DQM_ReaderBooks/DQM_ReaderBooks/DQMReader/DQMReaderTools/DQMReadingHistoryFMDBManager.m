@@ -28,14 +28,27 @@
 
 
 /**
+ 打开表 没有表就创建表
+ @return 结果
+ */
+- (BOOL)OpenOrCreateReadHistoryFMDB {
+  
+  if ([self CreateOrOpenSqliteFMDBIfNeed]) {
+    //成功打开数据库
+     return [self createReadHistoryFMDB];
+  }
+  return false;
+}
+
+/**
  创建表 name文件名  path文件路径   type文件类型  currentIndex当前第几页  currentChapter当前第几章
  @return 创建结果
  */
 - (BOOL)createReadHistoryFMDB {
   //AUTOINCREMENT 自增    PRIMARY KEY关键字
-  BOOL result = [_db executeUpdate:@"CREATE TABLE IF NOT EXISTS dqmReadHistory (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, path text NOT NULL, type text NOT NULL, currentChapter integer NOT NULL, currentIndex integer NOT NULL);"];
+  BOOL result = [_db executeUpdate:@"CREATE TABLE IF NOT EXISTS dqmReadHistory (id integer PRIMARY KEY AUTOINCREMENT, name text NOT NULL, path text NOT NULL, type text NOT NULL, textFontSize text NOT NULL, currentChapter integer NOT NULL, currentIndex integer NOT NULL);"];
   if (result) {
-    NSLog(@"创建表成功");
+    NSLog(@"创建表成功或已存在");
   } else {
     NSLog(@"创建表失败");
   }
@@ -60,10 +73,10 @@
 
 
 /**
- 打开数据库
+ 闯进或打开数据库
  @return 打开结果
  */
-- (BOOL)openReadHistoryDB {
+- (BOOL)CreateOrOpenSqliteFMDBIfNeed {
   //1.获取数据库文件的路径
   _txtPath = [NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES) lastObject];
   NSLog(@"数据库地址: %@",_txtPath);
@@ -73,6 +86,7 @@
   _db = [FMDatabase databaseWithPath:fileName];
   if ([_db open]) {
     NSLog(@"打开数据库成功");
+    [self createReadHistoryFMDB];
     return true;
   } else {
     NSLog(@"打开数据库失败");
@@ -87,7 +101,12 @@
 - (BOOL)insertDataToReadHistory:(DQMReadHistory *)historyModel {
   //插入数据
   //1.executeUpdate:不确定的参数用？来占位（后面参数必须是oc对象，；代表语句结束）
-  BOOL result = [_db executeUpdate:@"INSERT INTO dqmReadHistory (name, path, type, currentIndex, currentChapter) VALUES (?,?,?)",historyModel.name, historyModel.path, historyModel.type, historyModel.currentIndex, historyModel.currentChapter];
+//  BOOL result = [_db executeUpdate:@"INSERT INTO dqmReadHistory (name, path, type, textFontSize, currentIndex, currentChapter) VALUES (?,?,?,?,?,?)",historyModel.name, historyModel.path, historyModel.type, historyModel.textFontSize, @(historyModel.currentIndex), @(historyModel.currentChapter)];
+  
+  NSString *sql = [NSString stringWithFormat:@"INSERT INTO dqmReadHistory (name, path, type, textFontSize, currentIndex, currentChapter) VALUES (?,?,?,?,?,?)"];
+  BOOL result = [_db executeUpdate:sql withArgumentsInArray:@[historyModel.name, historyModel.path, historyModel.type, historyModel.textFontSize, @(historyModel.currentIndex), @(historyModel.currentChapter)]];
+  
+  
   
   //2.executeUpdateWithForamat：不确定的参数用%@，%d等来占位 （参数为原始数据类型，执行语句不区分大小写）
   //    BOOL result = [_db executeUpdateWithFormat:@"insert into t_student (name,age, sex) values (%@,%i,%@)",name,age,sex];
@@ -141,8 +160,8 @@
 //  BOOL result = [_db executeUpdate:@"update dqmReadHistory set name = ?, path = ?, type = ?, currentIndex = ?, currentChapter = ?  where name = ?",historyModel.name,historyModel.path,historyModel.type,historyModel.currentIndex,historyModel.currentChapter,historyModel.name];
   
  //2.
-  NSString *sql = [NSString stringWithFormat:@"update dqmReadHistory set name = ?, path = ?, type = ?, currentIndex = ?, currentChapter = ?  where name = ?"];
-  BOOL result = [_db executeUpdate:sql withArgumentsInArray:@[historyModel.name,historyModel.path,historyModel.type,@(historyModel.currentIndex),@(historyModel.currentChapter),historyModel.name]];
+  NSString *sql = [NSString stringWithFormat:@"update dqmReadHistory set name = ?, path = ?, type = ?, textFontSize = ?, currentIndex = ?, currentChapter = ?  where name = ?"];
+  BOOL result = [_db executeUpdate:sql withArgumentsInArray:@[historyModel.name, historyModel.path, historyModel.type, historyModel.textFontSize, @(historyModel.currentIndex), @(historyModel.currentChapter), historyModel.name]];
   
   if (result) {
     NSLog(@"修改成功");
@@ -178,14 +197,16 @@
       NSString *name = [resultSet objectForColumn:@"name"];
       NSString *path = [resultSet objectForColumn:@"path"];
       NSString *type = [resultSet objectForColumn:@"type"];
+      NSString *textFontSize = [resultSet objectForColumn:@"textFontSize"];
       NSInteger currentIndex = [resultSet intForColumn:@"currentIndex"];
       NSInteger currentChapter = [resultSet intForColumn:@"currentChapter"];
-      NSLog(@"编号：%@ 名称：%@ 路径：%@ 类型：%@ 页数:%ld, 章节:%ld", @(idNum), name, path, type, currentIndex, currentChapter);
+      NSLog(@"编号：%@ 名称：%@ 路径：%@ 类型：%@ 字体：%@ 页数:%ld, 章节:%ld", @(idNum), name, path, type, textFontSize, currentIndex, currentChapter);
       
       DQMReadHistory *resultHistory = [[DQMReadHistory alloc] init];
       resultHistory.name = name;
        resultHistory.path = path;
        resultHistory.type = type;
+      resultHistory.textFontSize = textFontSize;
        resultHistory.currentIndex = currentIndex;
        resultHistory.currentChapter = currentChapter;
       return resultHistory;

@@ -22,6 +22,13 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (instancetype)sharedInstance;
 
+
+/**
+ 打开表 没有表就创建表
+ @return 结果
+ */
+- (BOOL)OpenOrCreateReadHistoryFMDB;
+
 /**
  创建表 name文件名  path文件路径   type文件类型  currentIndex当前第几页  currentChapter当前第几章
  @return 创建结果
@@ -38,7 +45,7 @@ NS_ASSUME_NONNULL_BEGIN
  打开数据库
  @return 打开结果
  */
-- (BOOL)openReadHistoryDB;
+- (BOOL)CreateOrOpenSqliteFMDBIfNeed;
 
 /**
  插入数据

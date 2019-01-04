@@ -43,7 +43,7 @@
   self.window.rootViewController = [[DQMTabBarController alloc] init];
   [self.window makeKeyAndVisible];
   
-  [self.window addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake((kScreenWidth-90)/2, STATUS_BAR_HEIGHT, 0, 0)]];
+  [self.window addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake(61, STATUS_BAR_HEIGHT, 0, 0)]];
   
   
   

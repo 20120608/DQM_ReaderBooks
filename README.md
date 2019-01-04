@@ -21,8 +21,15 @@
   }    
         
         
-  翻页手势执行一半放回，下一页的代码却执行了的BUG
-      
+  翻页手势执行一半放回，上一页/下一页的代码却执行了的BUG,而且UIPage的手势容易导致重复页码
+  解决方法:     
+  1.用显示文字的实际内容DQMReaderContentViewController作为缓存地方缓存对应的下标和章节    
+  2.在上下页的回调中分别重置currnetIndex和CurrnetChapter     
+  3.在目录点击回调的分别重置currnetIndex和CurrnetChapter 
+  [image](https://github.com/DQM_ReaderBooks/DQM_ReaderBooks/BUG2.jpg)
+     
+        
+             
         
         
         

@@ -8,7 +8,7 @@
 
 #import "DQMTabBarController.h"
 #import "DQMNavigationController.h"                     //导航栏  给每个首页套上导航栏
-#import "ReactiveCocoaListViewController.h"
+#import "BooksListViewController.h"
 
 @interface DQMTabBarController () <UITabBarControllerDelegate>
 
@@ -31,7 +31,7 @@
 
 - (void)addChildViewControllers
 {
-  DQMNavigationController *one = [[DQMNavigationController alloc] initWithRootViewController:[[ReactiveCocoaListViewController alloc] initWithTitle:@"首页列表"]];
+  DQMNavigationController *one = [[DQMNavigationController alloc] initWithRootViewController:[[BooksListViewController alloc] initWithTitle:@"首页列表"]];
   
 //  LMJNavigationController *two = [[LMJNavigationController alloc] initWithRootViewController:[[LMJNewViewController alloc] init]];
 //
@@ -51,7 +51,7 @@
 {
   
   NSDictionary *firstTabBarItemsAttributes = @{
-                                               @"TabBarItemTitle" : @"首页列表",
+                                               @"TabBarItemTitle" : @"s书本列表",
                                                @"TabBarItemImage" : @"icon_tabbar_home_default",
                                                @"TabBarItemSelectedImage" : @"icon_tabbar_home_select",
                                                };

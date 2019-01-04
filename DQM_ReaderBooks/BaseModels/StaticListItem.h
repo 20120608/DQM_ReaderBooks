@@ -30,6 +30,9 @@
 /** 左边的图片 UIImage 或者 NSURL 或者 URLString 或者 ImageName */
 @property (nonatomic, strong) id image;
 
+/** 扩展保留的字段 */
+@property (nonatomic,strong) NSDictionary *extensionDictionary;
+
 /** 这是要调转的目标控制器 */
 @property (assign, nonatomic) Class destVc;
 
@@ -50,6 +53,9 @@
 
 /** 带点击事件 返回一个cell */
 + (instancetype)itemWithTitle:(NSString *)title subTitle:(NSString *)subTitle itemOperation:(void(^)(NSIndexPath *indexPath))itemOperation;
+
+/** 带点击事件且带有附加的extensionDictionary 返回一个cell */
++ (instancetype)itemAdditionalExtensionWithTitle:(NSString *)title subTitle:(NSString *)subTitle extensionDictionary:(NSDictionary *)extensionDictionary itemOperation:(void(^)(NSIndexPath *indexPath))itemOperation;
 
 /** 带点击事件 返回一个cell 还能带上是否展示箭头等辅助视图 */
 + (instancetype)itemWithTitle:(NSString *)title subTitle:(NSString *)subTitle accessoryType:(UITableViewCellAccessoryType)accessoryType itemOperation:(void(^)(NSIndexPath *indexPath))itemOperation;

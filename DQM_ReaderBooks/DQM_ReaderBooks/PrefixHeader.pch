@@ -10,5 +10,9 @@
 #define PrefixHeader_pch
 
 #import "dqmBasePrefix.pch"
+#import "DQMReaderPrefixHeader.pch"
+
+
+
 
 #endif /* PrefixHeader_pch */

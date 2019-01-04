@@ -40,6 +40,13 @@
   return item;
 }
 
+/** 带点击事件且带有附加的extensionDictionary 返回一个cell */
++ (instancetype)itemAdditionalExtensionWithTitle:(NSString *)title subTitle:(NSString *)subTitle extensionDictionary:(NSDictionary *)extensionDictionary itemOperation:(void(^)(NSIndexPath *indexPath))itemOperation {
+  StaticListItem *item = [self itemWithTitle:title subTitle:subTitle itemOperation:itemOperation];
+  item.itemOperation = itemOperation;
+  item.extensionDictionary = extensionDictionary;
+  return item;
+}
 
 - (instancetype)init
 {

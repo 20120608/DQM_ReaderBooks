@@ -47,6 +47,19 @@
 		597FD93021DDE07000E2BF99 /* UIImageView+SDwebImageFade.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD90E21DDE07000E2BF99 /* UIImageView+SDwebImageFade.m */; };
 		597FD93121DDE07000E2BF99 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD91121DDE07000E2BF99 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		597FD93221DDE07000E2BF99 /* DqmBaseAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597FD91221DDE07000E2BF99 /* DqmBaseAssets.xcassets */; };
+		597FD93721DDE13400E2BF99 /* BooksListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD93621DDE13400E2BF99 /* BooksListViewController.m */; };
+		597FD93A21DDE23000E2BF99 /* 龙王传说.txt in Resources */ = {isa = PBXBuildFile; fileRef = 597FD93921DDE23000E2BF99 /* 龙王传说.txt */; };
+		597FD93E21DDE58E00E2BF99 /* DQMFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD93D21DDE58E00E2BF99 /* DQMFileTools.m */; };
+		597FD94221DDF64100E2BF99 /* DCBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD94121DDF64100E2BF99 /* DCBookModel.m */; };
+		597FD94521DDFC4600E2BF99 /* DQMReaderPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD94421DDFC4600E2BF99 /* DQMReaderPageViewController.m */; };
+		597FD94B21DDFE3000E2BF99 /* DQMReaderContentViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD94A21DDFE3000E2BF99 /* DQMReaderContentViewController.m */; };
+		597FD95221DDFF6400E2BF99 /* DQMPageTopView.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD95121DDFF6400E2BF99 /* DQMPageTopView.m */; };
+		597FD95521DDFF7200E2BF99 /* DQMPageBottomView.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD95421DDFF7200E2BF99 /* DQMPageBottomView.m */; };
+		597FD95821DE05DB00E2BF99 /* DQMPageDirectoryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD95721DE05DB00E2BF99 /* DQMPageDirectoryView.m */; };
+		597FD95B21DE0B4D00E2BF99 /* DQMBatteryView.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD95A21DE0B4D00E2BF99 /* DQMBatteryView.m */; };
+		597FD95F21DF00D500E2BF99 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 597FD95E21DF00D500E2BF99 /* libsqlite3.0.tbd */; };
+		597FD96221DF016100E2BF99 /* DQMReadingHistoryFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD96121DF016100E2BF99 /* DQMReadingHistoryFMDBManager.m */; };
+		597FD96521DF01DC00E2BF99 /* DQMReadHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD96421DF01DC00E2BF99 /* DQMReadHistory.m */; };
 		7CF5B52B9800C4350C575024 /* Pods_DQM_ReaderBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF9552BB303D5EE4724677F /* Pods_DQM_ReaderBooks.framework */; };
 /* End PBXBuildFile section */
 
@@ -151,6 +164,32 @@
 		597FD91121DDE07000E2BF99 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
 		597FD91221DDE07000E2BF99 /* DqmBaseAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DqmBaseAssets.xcassets; sourceTree = SOURCE_ROOT; };
 		597FD93321DDE08D00E2BF99 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
+		597FD93521DDE13400E2BF99 /* BooksListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooksListViewController.h; sourceTree = "<group>"; };
+		597FD93621DDE13400E2BF99 /* BooksListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksListViewController.m; sourceTree = "<group>"; };
+		597FD93921DDE23000E2BF99 /* 龙王传说.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "龙王传说.txt"; sourceTree = "<group>"; };
+		597FD93C21DDE58E00E2BF99 /* DQMFileTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMFileTools.h; sourceTree = "<group>"; };
+		597FD93D21DDE58E00E2BF99 /* DQMFileTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQMFileTools.m; sourceTree = "<group>"; };
+		597FD93F21DDE7BE00E2BF99 /* DQMReaderPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMReaderPrefixHeader.pch; sourceTree = "<group>"; };
+		597FD94021DDF64100E2BF99 /* DCBookModel.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DCBookModel.h; sourceTree = "<group>"; };
+		597FD94121DDF64100E2BF99 /* DCBookModel.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DCBookModel.m; sourceTree = "<group>"; };
+		597FD94321DDFC4600E2BF99 /* DQMReaderPageViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMReaderPageViewController.h; sourceTree = "<group>"; };
+		597FD94421DDFC4600E2BF99 /* DQMReaderPageViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQMReaderPageViewController.m; sourceTree = "<group>"; };
+		597FD94921DDFE3000E2BF99 /* DQMReaderContentViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMReaderContentViewController.h; sourceTree = "<group>"; };
+		597FD94A21DDFE3000E2BF99 /* DQMReaderContentViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQMReaderContentViewController.m; sourceTree = "<group>"; };
+		597FD95021DDFF6400E2BF99 /* DQMPageTopView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMPageTopView.h; sourceTree = "<group>"; };
+		597FD95121DDFF6400E2BF99 /* DQMPageTopView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQMPageTopView.m; sourceTree = "<group>"; };
+		597FD95321DDFF7200E2BF99 /* DQMPageBottomView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMPageBottomView.h; sourceTree = "<group>"; };
+		597FD95421DDFF7200E2BF99 /* DQMPageBottomView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQMPageBottomView.m; sourceTree = "<group>"; };
+		597FD95621DE05DB00E2BF99 /* DQMPageDirectoryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMPageDirectoryView.h; sourceTree = "<group>"; };
+		597FD95721DE05DB00E2BF99 /* DQMPageDirectoryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQMPageDirectoryView.m; sourceTree = "<group>"; };
+		597FD95921DE0B4D00E2BF99 /* DQMBatteryView.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMBatteryView.h; sourceTree = "<group>"; };
+		597FD95A21DE0B4D00E2BF99 /* DQMBatteryView.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQMBatteryView.m; sourceTree = "<group>"; };
+		597FD95C21DF00C800E2BF99 /* libsqlite3.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.tbd; path = usr/lib/libsqlite3.tbd; sourceTree = SDKROOT; };
+		597FD95E21DF00D500E2BF99 /* libsqlite3.0.tbd */ = {isa = PBXFileReference; lastKnownFileType = "sourcecode.text-based-dylib-definition"; name = libsqlite3.0.tbd; path = usr/lib/libsqlite3.0.tbd; sourceTree = SDKROOT; };
+		597FD96021DF016100E2BF99 /* DQMReadingHistoryFMDBManager.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMReadingHistoryFMDBManager.h; sourceTree = "<group>"; };
+		597FD96121DF016100E2BF99 /* DQMReadingHistoryFMDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQMReadingHistoryFMDBManager.m; sourceTree = "<group>"; };
+		597FD96321DF01DC00E2BF99 /* DQMReadHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMReadHistory.h; sourceTree = "<group>"; };
+		597FD96421DF01DC00E2BF99 /* DQMReadHistory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQMReadHistory.m; sourceTree = "<group>"; };
 		BCF9552BB303D5EE4724677F /* Pods_DQM_ReaderBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DQM_ReaderBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -159,6 +198,7 @@
 			isa = PBXFrameworksBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597FD95F21DF00D500E2BF99 /* libsqlite3.0.tbd in Frameworks */,
 				7CF5B52B9800C4350C575024 /* Pods_DQM_ReaderBooks.framework in Frameworks */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -212,6 +252,9 @@
 				597FD8F421DDE07000E2BF99 /* Helpers */,
 				597FD91221DDE07000E2BF99 /* DqmBaseAssets.xcassets */,
 				597FD8F321DDE07000E2BF99 /* dqmBasePrefix.pch */,
+				597FD93821DDE21800E2BF99 /* Resource */,
+				597FD93B21DDE55A00E2BF99 /* DQMReader */,
+				597FD93421DDE10C00E2BF99 /* Home */,
 				597FD89621DDDFE600E2BF99 /* AppDelegate.h */,
 				597FD89721DDDFE600E2BF99 /* AppDelegate.m */,
 				597FD89921DDDFE600E2BF99 /* ViewController.h */,
@@ -247,24 +290,24 @@
 		597FD8C821DDE07000E2BF99 /* BaseControllers */ = {
 			isa = PBXGroup;
 			children = (
-				597FD8C921DDE07000E2BF99 /* DQMFoldingTableViewController.h */,
 				597FD8CA21DDE07000E2BF99 /* DQMBaseViewController.h */,
-				597FD8CB21DDE07000E2BF99 /* DQMNavUIBaseViewController.h */,
-				597FD8CC21DDE07000E2BF99 /* DQMTabBarController.m */,
-				597FD8CD21DDE07000E2BF99 /* DQMNavigationController.h */,
-				597FD8CE21DDE07000E2BF99 /* DQMTextViewController.h */,
-				597FD8CF21DDE07000E2BF99 /* DQMStaticTableViewController.m */,
-				597FD8D021DDE07000E2BF99 /* DQMRequestBaseViewController.m */,
-				597FD8D121DDE07000E2BF99 /* DQMTableViewController.h */,
 				597FD8D221DDE07000E2BF99 /* DQMBaseViewController.m */,
+				597FD8C921DDE07000E2BF99 /* DQMFoldingTableViewController.h */,
 				597FD8D321DDE07000E2BF99 /* DQMFoldingTableViewController.m */,
+				597FD8CD21DDE07000E2BF99 /* DQMNavigationController.h */,
 				597FD8D421DDE07000E2BF99 /* DQMNavigationController.m */,
-				597FD8D521DDE07000E2BF99 /* DQMTabBarController.h */,
+				597FD8CB21DDE07000E2BF99 /* DQMNavUIBaseViewController.h */,
 				597FD8D621DDE07000E2BF99 /* DQMNavUIBaseViewController.m */,
-				597FD8D721DDE07000E2BF99 /* DQMTextViewController.m */,
-				597FD8D821DDE07000E2BF99 /* DQMTableViewController.m */,
 				597FD8D921DDE07000E2BF99 /* DQMRequestBaseViewController.h */,
+				597FD8D021DDE07000E2BF99 /* DQMRequestBaseViewController.m */,
 				597FD8DA21DDE07000E2BF99 /* DQMStaticTableViewController.h */,
+				597FD8CF21DDE07000E2BF99 /* DQMStaticTableViewController.m */,
+				597FD8D521DDE07000E2BF99 /* DQMTabBarController.h */,
+				597FD8CC21DDE07000E2BF99 /* DQMTabBarController.m */,
+				597FD8D121DDE07000E2BF99 /* DQMTableViewController.h */,
+				597FD8D821DDE07000E2BF99 /* DQMTableViewController.m */,
+				597FD8CE21DDE07000E2BF99 /* DQMTextViewController.h */,
+				597FD8D721DDE07000E2BF99 /* DQMTextViewController.m */,
 			);
 			path = BaseControllers;
 			sourceTree = SOURCE_ROOT;
@@ -293,14 +336,14 @@
 		597FD8EA21DDE07000E2BF99 /* BaseModels */ = {
 			isa = PBXGroup;
 			children = (
-				597FD8EB21DDE07000E2BF99 /* DQMTeam.h */,
-				597FD8EC21DDE07000E2BF99 /* StaticListItem.m */,
 				597FD8ED21DDE07000E2BF99 /* DQMGroup.h */,
+				597FD8F021DDE07000E2BF99 /* DQMGroup.m */,
+				597FD8EB21DDE07000E2BF99 /* DQMTeam.h */,
+				597FD8F221DDE07000E2BF99 /* DQMTeam.m */,
+				597FD8F121DDE07000E2BF99 /* StaticListItem.h */,
+				597FD8EC21DDE07000E2BF99 /* StaticListItem.m */,
 				597FD8EE21DDE07000E2BF99 /* StaticSectionItem.h */,
 				597FD8EF21DDE07000E2BF99 /* StaticSectionItem.m */,
-				597FD8F021DDE07000E2BF99 /* DQMGroup.m */,
-				597FD8F121DDE07000E2BF99 /* StaticListItem.h */,
-				597FD8F221DDE07000E2BF99 /* DQMTeam.m */,
 			);
 			path = BaseModels;
 			sourceTree = SOURCE_ROOT;
@@ -389,9 +432,88 @@
 			path = UINavigationController;
 			sourceTree = "<group>";
 		};
+		597FD93421DDE10C00E2BF99 /* Home */ = {
+			isa = PBXGroup;
+			children = (
+				597FD93521DDE13400E2BF99 /* BooksListViewController.h */,
+				597FD93621DDE13400E2BF99 /* BooksListViewController.m */,
+			);
+			path = Home;
+			sourceTree = "<group>";
+		};
+		597FD93821DDE21800E2BF99 /* Resource */ = {
+			isa = PBXGroup;
+			children = (
+				597FD93921DDE23000E2BF99 /* 龙王传说.txt */,
+			);
+			path = Resource;
+			sourceTree = "<group>";
+		};
+		597FD93B21DDE55A00E2BF99 /* DQMReader */ = {
+			isa = PBXGroup;
+			children = (
+				597FD94621DDFC4E00E2BF99 /* DQMReaderTools */,
+				597FD94721DDFC6100E2BF99 /* DQMReaderModel */,
+				597FD94C21DDFF0D00E2BF99 /* DQMReaderView */,
+				597FD94821DDFC6E00E2BF99 /* DQMReaderController */,
+			);
+			path = DQMReader;
+			sourceTree = "<group>";
+		};
+		597FD94621DDFC4E00E2BF99 /* DQMReaderTools */ = {
+			isa = PBXGroup;
+			children = (
+				597FD93F21DDE7BE00E2BF99 /* DQMReaderPrefixHeader.pch */,
+				597FD93C21DDE58E00E2BF99 /* DQMFileTools.h */,
+				597FD93D21DDE58E00E2BF99 /* DQMFileTools.m */,
+				597FD96021DF016100E2BF99 /* DQMReadingHistoryFMDBManager.h */,
+				597FD96121DF016100E2BF99 /* DQMReadingHistoryFMDBManager.m */,
+				597FD96321DF01DC00E2BF99 /* DQMReadHistory.h */,
+				597FD96421DF01DC00E2BF99 /* DQMReadHistory.m */,
+			);
+			path = DQMReaderTools;
+			sourceTree = "<group>";
+		};
+		597FD94721DDFC6100E2BF99 /* DQMReaderModel */ = {
+			isa = PBXGroup;
+			children = (
+				597FD94021DDF64100E2BF99 /* DCBookModel.h */,
+				597FD94121DDF64100E2BF99 /* DCBookModel.m */,
+			);
+			path = DQMReaderModel;
+			sourceTree = "<group>";
+		};
+		597FD94821DDFC6E00E2BF99 /* DQMReaderController */ = {
+			isa = PBXGroup;
+			children = (
+				597FD94321DDFC4600E2BF99 /* DQMReaderPageViewController.h */,
+				597FD94421DDFC4600E2BF99 /* DQMReaderPageViewController.m */,
+				597FD94921DDFE3000E2BF99 /* DQMReaderContentViewController.h */,
+				597FD94A21DDFE3000E2BF99 /* DQMReaderContentViewController.m */,
+			);
+			path = DQMReaderController;
+			sourceTree = "<group>";
+		};
+		597FD94C21DDFF0D00E2BF99 /* DQMReaderView */ = {
+			isa = PBXGroup;
+			children = (
+				597FD95021DDFF6400E2BF99 /* DQMPageTopView.h */,
+				597FD95121DDFF6400E2BF99 /* DQMPageTopView.m */,
+				597FD95921DE0B4D00E2BF99 /* DQMBatteryView.h */,
+				597FD95A21DE0B4D00E2BF99 /* DQMBatteryView.m */,
+				597FD95321DDFF7200E2BF99 /* DQMPageBottomView.h */,
+				597FD95421DDFF7200E2BF99 /* DQMPageBottomView.m */,
+				597FD95621DE05DB00E2BF99 /* DQMPageDirectoryView.h */,
+				597FD95721DE05DB00E2BF99 /* DQMPageDirectoryView.m */,
+			);
+			path = DQMReaderView;
+			sourceTree = "<group>";
+		};
 		6A66DC4FDC93B3D63BD5690A /* Frameworks */ = {
 			isa = PBXGroup;
 			children = (
+				597FD95E21DF00D500E2BF99 /* libsqlite3.0.tbd */,
+				597FD95C21DF00C800E2BF99 /* libsqlite3.tbd */,
 				BCF9552BB303D5EE4724677F /* Pods_DQM_ReaderBooks.framework */,
 			);
 			name = Frameworks;
@@ -513,6 +635,7 @@
 			files = (
 				597FD8A321DDDFE700E2BF99 /* LaunchScreen.storyboard in Resources */,
 				597FD8A021DDDFE700E2BF99 /* Assets.xcassets in Resources */,
+				597FD93A21DDE23000E2BF99 /* 龙王传说.txt in Resources */,
 				597FD93221DDE07000E2BF99 /* DqmBaseAssets.xcassets in Resources */,
 				597FD89E21DDDFE600E2BF99 /* Main.storyboard in Resources */,
 			);
@@ -612,8 +735,12 @@
 				597FD91921DDE07000E2BF99 /* DQMNavUIBaseViewController.m in Sources */,
 				597FD91F21DDE07000E2BF99 /* DQMLabelSizeToFitTableViewCell.m in Sources */,
 				597FD91821DDE07000E2BF99 /* DQMNavigationController.m in Sources */,
+				597FD95521DDFF7200E2BF99 /* DQMPageBottomView.m in Sources */,
+				597FD94B21DDFE3000E2BF99 /* DQMReaderContentViewController.m in Sources */,
 				597FD91521DDE07000E2BF99 /* DQMRequestBaseViewController.m in Sources */,
 				597FD89B21DDDFE600E2BF99 /* ViewController.m in Sources */,
+				597FD95821DE05DB00E2BF99 /* DQMPageDirectoryView.m in Sources */,
+				597FD96221DF016100E2BF99 /* DQMReadingHistoryFMDBManager.m in Sources */,
 				597FD92321DDE07000E2BF99 /* StaticListItem.m in Sources */,
 				597FD92121DDE07000E2BF99 /* DQMAutoRefreshFooter.m in Sources */,
 				597FD93021DDE07000E2BF99 /* UIImageView+SDwebImageFade.m in Sources */,
@@ -622,20 +749,27 @@
 				597FD92621DDE07000E2BF99 /* DQMTeam.m in Sources */,
 				597FD8A621DDDFE700E2BF99 /* main.m in Sources */,
 				597FD91321DDE07000E2BF99 /* DQMTabBarController.m in Sources */,
+				597FD93E21DDE58E00E2BF99 /* DQMFileTools.m in Sources */,
 				597FD92921DDE07000E2BF99 /* QMSGeneralHelpers.m in Sources */,
 				597FD89821DDDFE600E2BF99 /* AppDelegate.m in Sources */,
 				597FD91A21DDE07000E2BF99 /* DQMTextViewController.m in Sources */,
 				597FD92021DDE07000E2BF99 /* DQMLabelSizeToFitInTableViewCell.m in Sources */,
 				597FD92B21DDE07000E2BF99 /* UIWindow+CurrentViewController.m in Sources */,
 				597FD92521DDE07000E2BF99 /* DQMGroup.m in Sources */,
+				597FD95221DDFF6400E2BF99 /* DQMPageTopView.m in Sources */,
+				597FD93721DDE13400E2BF99 /* BooksListViewController.m in Sources */,
 				597FD91B21DDE07000E2BF99 /* DQMTableViewController.m in Sources */,
 				597FD91E21DDE07000E2BF99 /* StaticListTableViewCell.m in Sources */,
 				597FD92721DDE07000E2BF99 /* YYFPSLabel.m in Sources */,
 				597FD92821DDE07000E2BF99 /* JXTAlertController.m in Sources */,
 				597FD91421DDE07000E2BF99 /* DQMStaticTableViewController.m in Sources */,
 				597FD91C21DDE07000E2BF99 /* DQMDefaultTableViewCell.m in Sources */,
+				597FD94221DDF64100E2BF99 /* DCBookModel.m in Sources */,
 				597FD92A21DDE07000E2BF99 /* DQMConst.m in Sources */,
+				597FD95B21DE0B4D00E2BF99 /* DQMBatteryView.m in Sources */,
+				597FD96521DF01DC00E2BF99 /* DQMReadHistory.m in Sources */,
 				597FD91721DDE07000E2BF99 /* DQMFoldingTableViewController.m in Sources */,
+				597FD94521DDFC4600E2BF99 /* DQMReaderPageViewController.m in Sources */,
 				597FD92D21DDE07000E2BF99 /* UIView+GestureCallback.m in Sources */,
 				597FD91621DDE07000E2BF99 /* DQMBaseViewController.m in Sources */,
 				597FD92421DDE07000E2BF99 /* StaticSectionItem.m in Sources */,

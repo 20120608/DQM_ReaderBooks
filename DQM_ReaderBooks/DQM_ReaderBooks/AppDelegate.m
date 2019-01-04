@@ -7,7 +7,11 @@
 //
 
 #import "AppDelegate.h"
-
+#import "IQKeyboardManager.h"
+#import "DQMTabBarController.h"
+#import "YYFPSLabel.h"
+#import "DQMReaderPageViewController.h"           //小说阅读器
+#import "DQMReadHistory.h"                         //小说模型
 @interface AppDelegate ()
 
 @end
@@ -16,7 +20,66 @@
 
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
-  // Override point for customization after application launch.
+  
+  //创建根目录
+  [DQMFileTools creatRootDirectory];
+  NSLog(@"%@",DCBooksPath);
+  
+  //设置默认信息
+  if(![[NSUserDefaults standardUserDefaults] objectForKey:DCReadMode])
+  {
+    [[NSUserDefaults standardUserDefaults] setObject:DCReadDefaultMode forKey:DCReadMode];
+  }
+  
+  /*配置键盘*/
+  IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
+  manager.enable = YES;//    控制整个功能是否启用。
+  manager.overrideKeyboardAppearance = YES;
+  manager.shouldResignOnTouchOutside = YES;//控制点击背景是否收起键盘
+  manager.enableAutoToolbar = YES;//控制是否显示键盘上的工具条。
+  manager.keyboardDistanceFromTextField = 10.0f; // 输入框距离键盘的距离
+  
+  
+  self.window.rootViewController = [[DQMTabBarController alloc] init];
+  [self.window makeKeyAndVisible];
+  
+  [self.window addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake((kScreenWidth-90)/2, STATUS_BAR_HEIGHT, 0, 0)]];
+  
+  
+  
+  
+  
+  return YES;
+
+}
+
+- (BOOL)application:(UIApplication *)app openURL:(NSURL *)url options:(NSDictionary<NSString *,id> *)options
+{
+  
+  //QQ文件可以用其他APP打开到这  以下部分可以不用
+  if (url)
+  {
+    
+    NSString *fileNameStr = [url lastPathComponent];
+    fileNameStr = [fileNameStr stringByRemovingPercentEncoding];
+    
+    NSString *toPath = [DCBooksPath stringByAppendingPathComponent:fileNameStr];
+    
+    NSData *data = [NSData dataWithContentsOfURL:url];
+    [data writeToFile:toPath atomically:YES];
+    
+    
+    //用阅读器打开这个文件
+//    DQMReaderPageViewController *vc = [[DQMReaderPageViewController alloc] init];
+//    DQMReadHistory *ReadHistory = [[DQMReadHistory alloc] init];
+//    ReadHistory.name ...
+//    vc.filePath = toPath;
+//    [((UINavigationController *)self.window.rootViewController.childViewControllers[0]).topViewController.navigationController pushViewController:vc animated:YES];
+    
+  }
+  
+  
+  
   return YES;
 }
 

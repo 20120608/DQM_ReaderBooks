@@ -1,6 +1,6 @@
 # DQM_ReaderBooks
 
-
+![image](https://github.com/20120608/DQM_ReaderBooks/blob/master/demo.gif)
 # 已知BUG,在某一些特定的章节会出现重复，还没有定位问题。基本不影响使用。
 
 
@@ -51,6 +51,7 @@
 
 5.加载网络图书。  完成
 需要用到AFNetworking进行书本下载操作;DEMO在第二个分页    
+![image](https://github.com/20120608/DQM_ReaderBooks/blob/master/download.gif)
 
   
   

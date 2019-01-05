@@ -82,6 +82,7 @@
 		597FD9B121E0827B00E2BF99 /* theme6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD9AE21E0827A00E2BF99 /* theme6.jpg */; };
 		597FD9B221E0827B00E2BF99 /* theme1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD9AF21E0827A00E2BF99 /* theme1.jpg */; };
 		597FD9B321E0827B00E2BF99 /* theme7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD9B021E0827B00E2BF99 /* theme7.jpg */; };
+		597FD9B721E08B0700E2BF99 /* DownloadOnceWebBookViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD9B621E08B0700E2BF99 /* DownloadOnceWebBookViewController.m */; };
 		7CF5B52B9800C4350C575024 /* Pods_DQM_ReaderBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF9552BB303D5EE4724677F /* Pods_DQM_ReaderBooks.framework */; };
 /* End PBXBuildFile section */
 
@@ -161,7 +162,7 @@
 		597FD8F021DDE07000E2BF99 /* DQMGroup.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMGroup.m; sourceTree = "<group>"; };
 		597FD8F121DDE07000E2BF99 /* StaticListItem.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = StaticListItem.h; sourceTree = "<group>"; };
 		597FD8F221DDE07000E2BF99 /* DQMTeam.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = DQMTeam.m; sourceTree = "<group>"; };
-		597FD8F321DDE07000E2BF99 /* dqmBasePrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = dqmBasePrefix.pch; sourceTree = SOURCE_ROOT; };
+		597FD8F321DDE07000E2BF99 /* dqmBasePrefix.pch */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; name = dqmBasePrefix.pch; path = DQM_ReaderBooks/DQMKit/dqmBasePrefix.pch; sourceTree = SOURCE_ROOT; };
 		597FD8F521DDE07000E2BF99 /* YYFPSLabel.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = YYFPSLabel.h; sourceTree = "<group>"; };
 		597FD8F621DDE07000E2BF99 /* QMSGeneralHelpers.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = QMSGeneralHelpers.h; sourceTree = "<group>"; };
 		597FD8F721DDE07000E2BF99 /* JXTAlertController.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = JXTAlertController.h; sourceTree = "<group>"; };
@@ -184,7 +185,7 @@
 		597FD90E21DDE07000E2BF99 /* UIImageView+SDwebImageFade.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIImageView+SDwebImageFade.m"; sourceTree = "<group>"; };
 		597FD91021DDE07000E2BF99 /* UINavigationController+FDFullscreenPopGesture.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UINavigationController+FDFullscreenPopGesture.h"; sourceTree = "<group>"; };
 		597FD91121DDE07000E2BF99 /* UINavigationController+FDFullscreenPopGesture.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UINavigationController+FDFullscreenPopGesture.m"; sourceTree = "<group>"; };
-		597FD91221DDE07000E2BF99 /* DqmBaseAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = DqmBaseAssets.xcassets; sourceTree = SOURCE_ROOT; };
+		597FD91221DDE07000E2BF99 /* DqmBaseAssets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; name = DqmBaseAssets.xcassets; path = DQM_ReaderBooks/DQMKit/DqmBaseAssets.xcassets; sourceTree = SOURCE_ROOT; };
 		597FD93321DDE08D00E2BF99 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		597FD93521DDE13400E2BF99 /* BooksListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooksListViewController.h; sourceTree = "<group>"; };
 		597FD93621DDE13400E2BF99 /* BooksListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksListViewController.m; sourceTree = "<group>"; };
@@ -236,6 +237,8 @@
 		597FD9AE21E0827A00E2BF99 /* theme6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme6.jpg; sourceTree = "<group>"; };
 		597FD9AF21E0827A00E2BF99 /* theme1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme1.jpg; sourceTree = "<group>"; };
 		597FD9B021E0827B00E2BF99 /* theme7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme7.jpg; sourceTree = "<group>"; };
+		597FD9B521E08B0700E2BF99 /* DownloadOnceWebBookViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DownloadOnceWebBookViewController.h; sourceTree = "<group>"; };
+		597FD9B621E08B0700E2BF99 /* DownloadOnceWebBookViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DownloadOnceWebBookViewController.m; sourceTree = "<group>"; };
 		BCF9552BB303D5EE4724677F /* Pods_DQM_ReaderBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DQM_ReaderBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -291,13 +294,7 @@
 		597FD89521DDDFE600E2BF99 /* DQM_ReaderBooks */ = {
 			isa = PBXGroup;
 			children = (
-				597FD8C821DDE07000E2BF99 /* BaseControllers */,
-				597FD8EA21DDE07000E2BF99 /* BaseModels */,
-				597FD8DB21DDE07000E2BF99 /* BaseViews */,
-				597FD8FD21DDE07000E2BF99 /* Category */,
-				597FD8F421DDE07000E2BF99 /* Helpers */,
-				597FD91221DDE07000E2BF99 /* DqmBaseAssets.xcassets */,
-				597FD8F321DDE07000E2BF99 /* dqmBasePrefix.pch */,
+				597FD9B421E086C500E2BF99 /* DQMKit */,
 				597FD93821DDE21800E2BF99 /* Resource */,
 				597FD93B21DDE55A00E2BF99 /* DQMReader */,
 				597FD93421DDE10C00E2BF99 /* Home */,
@@ -355,7 +352,8 @@
 				597FD8CE21DDE07000E2BF99 /* DQMTextViewController.h */,
 				597FD8D721DDE07000E2BF99 /* DQMTextViewController.m */,
 			);
-			path = BaseControllers;
+			name = BaseControllers;
+			path = DQM_ReaderBooks/DQMKit/BaseControllers;
 			sourceTree = SOURCE_ROOT;
 		};
 		597FD8DB21DDE07000E2BF99 /* BaseViews */ = {
@@ -376,7 +374,8 @@
 				597FD8E821DDE07000E2BF99 /* StaticListTableViewCell.h */,
 				597FD8E921DDE07000E2BF99 /* DQMListExpendHeaderView.m */,
 			);
-			path = BaseViews;
+			name = BaseViews;
+			path = DQM_ReaderBooks/DQMKit/BaseViews;
 			sourceTree = SOURCE_ROOT;
 		};
 		597FD8EA21DDE07000E2BF99 /* BaseModels */ = {
@@ -391,7 +390,8 @@
 				597FD8EE21DDE07000E2BF99 /* StaticSectionItem.h */,
 				597FD8EF21DDE07000E2BF99 /* StaticSectionItem.m */,
 			);
-			path = BaseModels;
+			name = BaseModels;
+			path = DQM_ReaderBooks/DQMKit/BaseModels;
 			sourceTree = SOURCE_ROOT;
 		};
 		597FD8F421DDE07000E2BF99 /* Helpers */ = {
@@ -406,7 +406,8 @@
 				597FD8FB21DDE07000E2BF99 /* QMSGeneralHelpers.m */,
 				597FD8FC21DDE07000E2BF99 /* DQMConst.m */,
 			);
-			path = Helpers;
+			name = Helpers;
+			path = DQM_ReaderBooks/DQMKit/Helpers;
 			sourceTree = SOURCE_ROOT;
 		};
 		597FD8FD21DDE07000E2BF99 /* Category */ = {
@@ -420,7 +421,8 @@
 				597FD90C21DDE07000E2BF99 /* UIImageView */,
 				597FD90F21DDE07000E2BF99 /* UINavigationController */,
 			);
-			path = Category;
+			name = Category;
+			path = DQM_ReaderBooks/DQMKit/Category;
 			sourceTree = SOURCE_ROOT;
 		};
 		597FD8FE21DDE07000E2BF99 /* UIWindow */ = {
@@ -486,6 +488,8 @@
 			children = (
 				597FD93521DDE13400E2BF99 /* BooksListViewController.h */,
 				597FD93621DDE13400E2BF99 /* BooksListViewController.m */,
+				597FD9B521E08B0700E2BF99 /* DownloadOnceWebBookViewController.h */,
+				597FD9B621E08B0700E2BF99 /* DownloadOnceWebBookViewController.m */,
 			);
 			path = Home;
 			sourceTree = "<group>";
@@ -593,6 +597,20 @@
 				597FD9AC21E0818400E2BF99 /* theme19.jpg */,
 			);
 			path = ReaderBackGroundImage;
+			sourceTree = "<group>";
+		};
+		597FD9B421E086C500E2BF99 /* DQMKit */ = {
+			isa = PBXGroup;
+			children = (
+				597FD8C821DDE07000E2BF99 /* BaseControllers */,
+				597FD8EA21DDE07000E2BF99 /* BaseModels */,
+				597FD8DB21DDE07000E2BF99 /* BaseViews */,
+				597FD8FD21DDE07000E2BF99 /* Category */,
+				597FD8F421DDE07000E2BF99 /* Helpers */,
+				597FD91221DDE07000E2BF99 /* DqmBaseAssets.xcassets */,
+				597FD8F321DDE07000E2BF99 /* dqmBasePrefix.pch */,
+			);
+			path = DQMKit;
 			sourceTree = "<group>";
 		};
 		6A66DC4FDC93B3D63BD5690A /* Frameworks */ = {
@@ -862,6 +880,7 @@
 				597FD96C21DF5F1D00E2BF99 /* UIView+Gradient.m in Sources */,
 				597FD91A21DDE07000E2BF99 /* DQMTextViewController.m in Sources */,
 				597FD92021DDE07000E2BF99 /* DQMLabelSizeToFitInTableViewCell.m in Sources */,
+				597FD9B721E08B0700E2BF99 /* DownloadOnceWebBookViewController.m in Sources */,
 				597FD92B21DDE07000E2BF99 /* UIWindow+CurrentViewController.m in Sources */,
 				597FD92521DDE07000E2BF99 /* DQMGroup.m in Sources */,
 				597FD95221DDFF6400E2BF99 /* DQMPageTopView.m in Sources */,

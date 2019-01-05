@@ -13,6 +13,9 @@
 #import "DQMReaderPrefixHeader.pch"
 
 
+//下载后通知书本列表刷新
+#define KreloadReadHistoryListDataNotification @"KreloadReadHistoryListDataNotification"
+
 
 
 #endif /* PrefixHeader_pch */

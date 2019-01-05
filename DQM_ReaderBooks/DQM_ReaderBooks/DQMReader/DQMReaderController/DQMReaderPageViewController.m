@@ -44,6 +44,13 @@
 - (void)viewDidLoad {
   [super viewDidLoad];
   
+  //设置默认信息
+  if(![[NSUserDefaults standardUserDefaults] objectForKey:DCReadMode])
+  {
+    [[NSUserDefaults standardUserDefaults] setObject:DCReadDefaultMode forKey:DCReadMode];
+    [[NSUserDefaults standardUserDefaults] setObject:@"0" forKey:DCReadTheme];
+  }
+  
   //初始化
   [self initialization];
   //加载数据
@@ -320,6 +327,18 @@
   }completion:^(BOOL finished) {
     self.topView.hidden = YES;
     self.bottomView.hidden = YES;
+    
+    //设置阅读点
+    NSArray *arr = self.pageViewController.viewControllers;
+    if(arr.count != 1) {
+      return;
+    }
+    DQMReaderContentViewController *vc = self.pageViewController.viewControllers.firstObject;
+    
+    NSIndexPath *scrollIndexPath = [NSIndexPath indexPathForRow:vc.currentChapter inSection:0];
+    [self.listView.tableView selectRowAtIndexPath:scrollIndexPath animated:true scrollPosition:UITableViewScrollPositionMiddle];
+
+    
   }];
   self.toolViewShow = NO;
   //更新状态栏是不是显示

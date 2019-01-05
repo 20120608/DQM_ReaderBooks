@@ -21,15 +21,13 @@
 
 - (BOOL)application:(UIApplication *)application didFinishLaunchingWithOptions:(NSDictionary *)launchOptions {
   
-  //创建根目录
+  //创建根目录  不创建
   [DQMFileTools creatRootDirectory];
   NSLog(@"%@",DCBooksPath);
   
-  //设置默认信息
-  if(![[NSUserDefaults standardUserDefaults] objectForKey:DCReadMode])
-  {
-    [[NSUserDefaults standardUserDefaults] setObject:DCReadDefaultMode forKey:DCReadMode];
-  }
+
+  
+  
   
   /*配置键盘*/
   IQKeyboardManager *manager = [IQKeyboardManager sharedManager];
@@ -44,8 +42,6 @@
   [self.window makeKeyAndVisible];
   
   [self.window addSubview:[[YYFPSLabel alloc] initWithFrame:CGRectMake(61, STATUS_BAR_HEIGHT, 0, 0)]];
-  
-  
   
   
   

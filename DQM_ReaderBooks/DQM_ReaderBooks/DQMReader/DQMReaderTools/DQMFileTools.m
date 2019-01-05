@@ -31,15 +31,18 @@
     //如果没有则创建文件夹
     [fileMag createDirectoryAtPath:DCBooksPath withIntermediateDirectories:YES attributes:nil error:nil];
   }
-  
-  //将mainbundle的文件拷贝到沙盒
-  NSString *filePath = [[NSBundle mainBundle] pathForResource:@"龙王传说" ofType:@"txt"];
-  if(![fileMag fileExistsAtPath:[DCBooksPath stringByAppendingPathComponent:@"龙王传说.txt"]])
-  {
-    [fileMag copyItemAtPath:filePath toPath:[DCBooksPath stringByAppendingPathComponent:@"龙王传说.txt"] error:nil];
-    NSLog(@"filepath = %@ , topath = %@",filePath,[DCBooksPath stringByAppendingPathComponent:@"龙王传说.txt"]);
-  }
   return YES;
+}
+
+/** 判断文件是否已经在沙盒中存在 */
++ (BOOL)isFileExist:(NSString *)fileName
+{
+  NSArray *paths = NSSearchPathForDirectoriesInDomains(NSDocumentDirectory, NSUserDomainMask, YES);
+  NSString *path = [paths objectAtIndex:0];
+  NSString *filePath = [path stringByAppendingPathComponent:fileName];
+  NSFileManager *fileManager = [NSFileManager defaultManager];
+  BOOL result = [fileManager fileExistsAtPath:filePath];
+  return result;
 }
 
 +(NSString *)transcodingWithPath:(NSString *)path

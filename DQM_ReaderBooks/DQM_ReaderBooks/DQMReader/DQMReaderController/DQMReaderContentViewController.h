@@ -14,11 +14,11 @@ NS_ASSUME_NONNULL_BEGIN
 @interface DQMReaderContentViewController : DQMBaseViewController
 
 
-@property (nonatomic,assign ) NSInteger                      currentIndex;//当前第几页
-@property (nonatomic,assign ) NSInteger                      currentChapter;//当前第几章章
+@property (nonatomic,assign ) NSInteger                 currentIndex;//当前第几页
+@property (nonatomic,assign ) NSInteger                 currentChapter;//当前第几章章
 
-@property (nonatomic,copy) NSMutableAttributedString *content;//内容
-@property (nonatomic,copy) NSString *text;
+@property (nonatomic,copy   ) NSMutableAttributedString *content;//内容
+@property (nonatomic,copy   ) NSString                  *text;
 
 -(void)updateUI;//更新ui
 

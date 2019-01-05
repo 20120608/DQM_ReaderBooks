@@ -70,6 +70,7 @@
 {
   NSString *readMode = [[NSUserDefaults standardUserDefaults] objectForKey:DCReadMode];
   NSString *readtheme = [[NSUserDefaults standardUserDefaults] objectForKey:DCReadTheme];
+  
 
   if([readMode isEqualToString:DCReadDefaultMode])
   {

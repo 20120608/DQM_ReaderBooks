@@ -24,6 +24,9 @@ NS_ASSUME_NONNULL_BEGIN
  */
 + (NSString *)getCachePath;
 
+/** 判断文件是否已经在沙盒中存在 */
++ (BOOL)isFileExist:(NSString *)fileName;
+
 /**
  获取临时路径
  */

@@ -4,7 +4,7 @@
 # 已知BUG,在某一些特定的章节会出现重复，还没有定位问题。基本不影响使用。
 
 
-在https://github.com/daichuan/DCBooks上修改而来
+在https://github.com/daichuan/DCBooks    上修改而来
 1.解决已知问题    
 字体大小变化导致的数组越界
 //重新计算分页    

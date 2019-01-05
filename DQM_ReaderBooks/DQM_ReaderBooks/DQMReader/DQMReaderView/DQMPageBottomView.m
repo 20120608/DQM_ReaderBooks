@@ -14,6 +14,8 @@
 @property (nonatomic,strong) UIButton *nightModeBtn;
 @property (nonatomic,strong) UIButton *fontAddBtn;
 @property (nonatomic,strong) UIButton *fontSubtractBtn;
+@property (nonatomic,strong) UIButton *themeBtn;
+
 
 @end
 
@@ -38,17 +40,19 @@
   CGFloat btnW = 25;
   CGFloat btnH = btnW;
   CGFloat btnY = 12;
-  CGFloat btnSpace = (self.width - 25*4 - 15*2) / 3;
+  CGFloat btnSpace = (self.width - 25*5 - 15*2) / 4;
   
   self.listBtn.frame = CGRectMake(15, btnY, btnW, btnH);
   self.nightModeBtn.frame = CGRectMake(self.listBtn.right + btnSpace, btnY, btnW, btnH);
-  self.fontAddBtn.frame = CGRectMake(self.nightModeBtn.right + btnSpace, btnY, btnW, btnH);
+  self.themeBtn.frame = CGRectMake(self.nightModeBtn.right + btnSpace, btnY, btnW, btnH);
+  self.fontAddBtn.frame = CGRectMake(self.themeBtn.right + btnSpace, btnY, btnW, btnH);
   self.fontSubtractBtn.frame = CGRectMake(self.fontAddBtn.right + btnSpace, btnY, btnW, btnH);
 }
 -(void)setupUI
 {
   [self addSubview:self.listBtn];
   [self addSubview:self.nightModeBtn];
+  [self addSubview:self.themeBtn];
   [self addSubview:self.fontAddBtn];
   [self addSubview:self.fontSubtractBtn];
   
@@ -88,6 +92,22 @@
     }
   }
 }
+
+
+-(void)theme:(UIButton *)sender {
+  if([self.delegate respondsToSelector:@selector(changeTheme:)])
+  {
+    NSInteger x = [[[NSUserDefaults standardUserDefaults] objectForKey:DCReadTheme] integerValue];
+    x++;
+    if (x >= 10) {
+      x = 0;
+    }
+    [self.delegate changeTheme:x];
+  }
+}
+
+
+
 -(UIButton *)listBtn
 {
   if(_listBtn == nil)
@@ -114,6 +134,18 @@
   }
   return _nightModeBtn;
 }
+-(UIButton *)themeBtn
+{
+  if(_themeBtn == nil)
+  {
+    _themeBtn = [[UIButton alloc]init];
+    _themeBtn.contentEdgeInsets = UIEdgeInsetsMake(2, 2, 2, 2);
+    [_themeBtn addTarget:self action:@selector(theme:) forControlEvents:UIControlEventTouchUpInside];
+    [_themeBtn setImage:[UIImage imageNamed:@"read_theme"] forState:UIControlStateNormal];
+    
+  }
+  return _themeBtn;
+}
 -(UIButton *)fontAddBtn
 {
   if(_fontAddBtn == nil)
@@ -138,4 +170,7 @@
   }
   return _fontSubtractBtn;
 }
+
+
+
 @end

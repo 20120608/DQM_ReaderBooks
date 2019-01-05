@@ -132,6 +132,9 @@ isPhoneX = [[UIApplication sharedApplication] delegate].window.safeAreaInsets.bo
 /** 常见的按钮点击事件封装和基本创建封装 */
 #import "UIButton+DQM.h"
 
+/** 颜色和渐变的扩展 */
+#import "UIColor+HexString.h"
+
 /** helper 常用通用工具类 */
 #import "QMSGeneralHelpers.h"//通用类
 #import "JXTAlertController.h"//警告弹窗

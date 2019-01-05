@@ -21,6 +21,9 @@ NS_ASSUME_NONNULL_BEGIN
 
 @interface DQMPageDirectoryView : UIView
 
+@property (nonatomic,strong) UITableView    *tableView;
+@property (nonatomic,strong) UIView         *backView;
+
 @property (nonatomic,strong) NSArray *list;
 @property (nonatomic,weak) id<DCBookListViewDelgate> delegate;
 

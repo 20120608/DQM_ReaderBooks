@@ -11,22 +11,29 @@
 #import "DQMBatteryView.h"  //界面带上电池电量
 
 @interface DQMReaderContentViewController ()
-@property (nonatomic,strong) UITextView *textView;
-@property (nonatomic,strong) UILabel *bottomRightL;
-@property (nonatomic,strong) UILabel *bottomLeftL;
-@property (nonatomic,assign) NSInteger index;//页数
-@property (nonatomic,assign) NSInteger totalPages;//总页数
+
+@property (nonatomic,strong) UIImageView    *backImageView;/** 背景 */
+@property (nonatomic,strong) UITextView     *textView;
+@property (nonatomic,strong) UILabel        *bottomRightL;
+@property (nonatomic,strong) UILabel        *bottomLeftL;
+@property (nonatomic,assign) NSInteger      index;//页数
+@property (nonatomic,assign) NSInteger      totalPages;//总页数
 @property (nonatomic,strong) DQMBatteryView *battery;
-@property (nonatomic,strong) UIColor *otherTextColor;
+@property (nonatomic,strong) UIColor        *otherTextColor;
+
 @end
 
 @implementation DQMReaderContentViewController
 
 #pragma mark  - life cycle
 - (void)viewDidLoad {
-  
   [super viewDidLoad];
+  
+  
   [self Initialize];
+  
+  [self.view addSubview:self.backImageView];
+
   
   [self.view addSubview:self.textView];
   [self.view addSubview:self.bottomRightL];
@@ -34,7 +41,7 @@
   [self.view addSubview:self.battery];
   
   [self.battery runProgress:[self getCurrentBatteryLevel]];
-  
+
 }
 
 -(void)viewDidLayoutSubviews
@@ -62,23 +69,26 @@
 -(void)updateUI
 {
   NSString *readMode = [[NSUserDefaults standardUserDefaults] objectForKey:DCReadMode];
+  NSString *readtheme = [[NSUserDefaults standardUserDefaults] objectForKey:DCReadTheme];
+
   if([readMode isEqualToString:DCReadDefaultMode])
   {
-    self.view.backgroundColor = [UIColor colorWithRed:250/255.0 green:244/255.0 blue:233/255.0 alpha:1];
     [self.content addAttribute:NSForegroundColorAttributeName value:[UIColor darkGrayColor] range:NSMakeRange(0, self.content.length)];
     self.textView.attributedText = self.content;
     self.bottomLeftL.textColor = [UIColor grayColor];
     self.bottomRightL.textColor = [UIColor grayColor];
     self.battery.lineColor = [UIColor grayColor];
-    
+    self.backImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"theme%@.jpg",readtheme]];
+
   }else
   {
-    self.view.backgroundColor = [UIColor colorWithRed:109/255.0 green:109/255.0 blue:111/255.0 alpha:1];
     [self.content addAttribute:NSForegroundColorAttributeName value:[UIColor lightTextColor] range:NSMakeRange(0, self.content.length)];
     self.textView.attributedText = self.content;
     self.bottomLeftL.textColor = [UIColor lightTextColor];
     self.bottomRightL.textColor = [UIColor lightTextColor];
     self.battery.lineColor = [UIColor lightTextColor];
+    self.backImageView.image = [UIImage imageNamed:[NSString stringWithFormat:@"theme1%@.jpg",readtheme]];
+
   }
 }
 - (CGFloat)getCurrentBatteryLevel
@@ -179,6 +189,15 @@
   }
   return _bottomRightL;
 }
+
+-(UIImageView *)backImageView
+{
+  if (!_backImageView) {
+    _backImageView = [[UIImageView alloc] initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
+  }
+  return _backImageView;
+}
+
 
 @end
 

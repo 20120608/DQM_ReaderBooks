@@ -34,7 +34,7 @@
 @property (nonatomic,strong ) DQMReaderContentViewController *currentVC;//显示的文字视图控制器
 @property (nonatomic,strong ) NSArray<NSMutableAttributedString *> *pageContentArray;//每一章 分页的数组
 @property (nonatomic,copy   ) NSString                       *textFontSize;//字体大小
-
+@property (nonatomic,strong ) UIColor                         *chemeColor;/** 背景色 */
 
 @end
 
@@ -127,12 +127,11 @@
       self.textFontSize = oldHistoryModel.textFontSize;
       _currentIndex = oldHistoryModel.currentIndex;
       _currentChapter = oldHistoryModel.currentChapter;
-      NSLog(@"查询完毕");
     }
   }
-  NSLog(@"设置接下去的");
   
   _attributeDict = @{NSFontAttributeName:[UIFont fontWithName:DCDefaultTextFontName size:self.textFontSize.intValue]};
+
   _contentSize = kContentSize;
   self.toolViewShow = NO;
 }
@@ -213,6 +212,7 @@
   [contentVC setIndex:index totalPages:self.pageContentArray.count];
   contentVC.currentIndex = index;
   contentVC.currentChapter = _currentChapter;
+  contentVC.view.backgroundColor = _chemeColor;
   self.currentVC = contentVC;
   [self saveUserReadedHistory];//保存记录
   return contentVC;
@@ -310,8 +310,10 @@
   self.listView.hidden = NO;
   
   //显示了则退回去
+  self.listView.backView.backgroundColor = [UIColor colorWithHexString:@"000000" alpha:0.01];
   [UIView animateWithDuration:0.3 animations:^{
-    self.listView.transform = CGAffineTransformMakeTranslation(kScreenWidth * 0.8, 0);
+    self.listView.backView.backgroundColor = [UIColor colorWithHexString:@"000000" alpha:0.8];
+    self.listView.tableView.frame = CGRectMake(0, 0, kScreenWidth*0.75, kScreenHeight);
     //显示了则退回去
     self.topView.transform = CGAffineTransformIdentity;
     self.bottomView.transform = CGAffineTransformIdentity;
@@ -393,6 +395,20 @@
   }
   
   [self.view makeToast:[NSString stringWithFormat:@"字体大小为: %@",self.textFontSize]];
+}
+
+- (void)changeTheme:(NSInteger)num
+{
+  //保存肤色  0-9白天  10-19夜晚  DCReadTheme只保存0-9的
+  NSLog(@"当前肤色 %ld",num);
+  [[NSUserDefaults standardUserDefaults] setObject:[NSString stringWithFormat:@"%ld",num] forKey:DCReadTheme];
+  
+  NSArray *arr = self.pageViewController.viewControllers;
+  if(arr.count != 1)
+    return;
+  DQMReaderContentViewController *vc = self.pageViewController.viewControllers.firstObject;
+  //更新UI
+  [vc updateUI];
 }
 
 
@@ -511,7 +527,7 @@
 {
   if(_listView == nil)
   {
-    _listView = [[DQMPageDirectoryView alloc]initWithFrame:CGRectMake(-kScreenWidth*0.8, 0, kScreenWidth, kScreenHeight)];
+    _listView = [[DQMPageDirectoryView alloc]initWithFrame:CGRectMake(0, 0, kScreenWidth, kScreenHeight)];
     _listView.hidden = YES;
     _listView.delegate = self;
   }

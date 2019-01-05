@@ -22,7 +22,7 @@ typedef enum: NSUInteger{
 -(void)readModeClick:(UIButton *)btn;
 -(void)listClick:(UIButton *)btn;
 -(void)setUpFontClick:(DCSetupFontType)type;
-
+-(void)changeTheme:(NSInteger)num;
 @end
 
 

@@ -19,8 +19,12 @@
 
 //NSUserDefault
 #define DCReadMode @"DCReadMode"//阅读模式
+#define DCReadTheme @"DCReadTheme"//换肤
 #define DCReadDefaultMode @"DCReadDefaultMode"//默认模式（白天）
 #define DCReadNightMode @"DCReadNightMode"//夜间模式
+
+
+
 #define DCTextFontSize @"DCTextFontSize"
 #define DCCurrentPage @"DCCurrentPage"
 #define DCBooksPath [[DQMFileTools getDocumentPath] stringByAppendingPathComponent:@"mybooks"] //书籍存放目录

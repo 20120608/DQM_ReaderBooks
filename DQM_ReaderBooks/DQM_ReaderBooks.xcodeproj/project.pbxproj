@@ -60,6 +60,28 @@
 		597FD95F21DF00D500E2BF99 /* libsqlite3.0.tbd in Frameworks */ = {isa = PBXBuildFile; fileRef = 597FD95E21DF00D500E2BF99 /* libsqlite3.0.tbd */; };
 		597FD96221DF016100E2BF99 /* DQMReadingHistoryFMDBManager.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD96121DF016100E2BF99 /* DQMReadingHistoryFMDBManager.m */; };
 		597FD96521DF01DC00E2BF99 /* DQMReadHistory.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD96421DF01DC00E2BF99 /* DQMReadHistory.m */; };
+		597FD96921DF5DFE00E2BF99 /* UIColor+HexString.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD96821DF5DFE00E2BF99 /* UIColor+HexString.m */; };
+		597FD96C21DF5F1D00E2BF99 /* UIView+Gradient.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD96A21DF5F1D00E2BF99 /* UIView+Gradient.m */; };
+		597FD97C21E0532000E2BF99 /* theme2.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD96E21E0531E00E2BF99 /* theme2.jpg */; };
+		597FD97D21E0532000E2BF99 /* theme8.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD96F21E0531E00E2BF99 /* theme8.jpg */; };
+		597FD98021E0532000E2BF99 /* theme0.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD97221E0531F00E2BF99 /* theme0.jpg */; };
+		597FD98221E0532000E2BF99 /* theme5.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD97421E0531F00E2BF99 /* theme5.jpg */; };
+		597FD98421E0532000E2BF99 /* theme12.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD97621E0531F00E2BF99 /* theme12.jpg */; };
+		597FD98521E0532000E2BF99 /* theme3.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD97721E0531F00E2BF99 /* theme3.jpg */; };
+		597FD98721E0532000E2BF99 /* theme9.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD97921E0532000E2BF99 /* theme9.jpg */; };
+		597FD99121E05F2500E2BF99 /* theme11.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD98A21E05F2400E2BF99 /* theme11.jpg */; };
+		597FD99E21E05F5700E2BF99 /* theme16.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD99821E05F5700E2BF99 /* theme16.jpg */; };
+		597FD9A021E05F5700E2BF99 /* theme15.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD99A21E05F5700E2BF99 /* theme15.jpg */; };
+		597FD9A121E05F5700E2BF99 /* theme14.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD99B21E05F5700E2BF99 /* theme14.jpg */; };
+		597FD9A321E05F5700E2BF99 /* theme17.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD99D21E05F5700E2BF99 /* theme17.jpg */; };
+		597FD9A521E07F5600E2BF99 /* theme13.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD9A421E07F5600E2BF99 /* theme13.jpg */; };
+		597FD9A721E07FE100E2BF99 /* theme18.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD9A621E07FE000E2BF99 /* theme18.jpg */; };
+		597FD9A921E0807B00E2BF99 /* theme10.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD9A821E0807B00E2BF99 /* theme10.jpg */; };
+		597FD9AB21E0814900E2BF99 /* theme4.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD9AA21E0814900E2BF99 /* theme4.jpg */; };
+		597FD9AD21E0818400E2BF99 /* theme19.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD9AC21E0818400E2BF99 /* theme19.jpg */; };
+		597FD9B121E0827B00E2BF99 /* theme6.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD9AE21E0827A00E2BF99 /* theme6.jpg */; };
+		597FD9B221E0827B00E2BF99 /* theme1.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD9AF21E0827A00E2BF99 /* theme1.jpg */; };
+		597FD9B321E0827B00E2BF99 /* theme7.jpg in Resources */ = {isa = PBXBuildFile; fileRef = 597FD9B021E0827B00E2BF99 /* theme7.jpg */; };
 		7CF5B52B9800C4350C575024 /* Pods_DQM_ReaderBooks.framework in Frameworks */ = {isa = PBXBuildFile; fileRef = BCF9552BB303D5EE4724677F /* Pods_DQM_ReaderBooks.framework */; };
 /* End PBXBuildFile section */
 
@@ -190,6 +212,30 @@
 		597FD96121DF016100E2BF99 /* DQMReadingHistoryFMDBManager.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQMReadingHistoryFMDBManager.m; sourceTree = "<group>"; };
 		597FD96321DF01DC00E2BF99 /* DQMReadHistory.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMReadHistory.h; sourceTree = "<group>"; };
 		597FD96421DF01DC00E2BF99 /* DQMReadHistory.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQMReadHistory.m; sourceTree = "<group>"; };
+		597FD96721DF5DFE00E2BF99 /* UIColor+HexString.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = "UIColor+HexString.h"; sourceTree = "<group>"; };
+		597FD96821DF5DFE00E2BF99 /* UIColor+HexString.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = "UIColor+HexString.m"; sourceTree = "<group>"; };
+		597FD96A21DF5F1D00E2BF99 /* UIView+Gradient.m */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.objc; path = "UIView+Gradient.m"; sourceTree = "<group>"; };
+		597FD96B21DF5F1D00E2BF99 /* UIView+Gradient.h */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = sourcecode.c.h; path = "UIView+Gradient.h"; sourceTree = "<group>"; };
+		597FD96E21E0531E00E2BF99 /* theme2.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme2.jpg; sourceTree = "<group>"; };
+		597FD96F21E0531E00E2BF99 /* theme8.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme8.jpg; sourceTree = "<group>"; };
+		597FD97221E0531F00E2BF99 /* theme0.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme0.jpg; sourceTree = "<group>"; };
+		597FD97421E0531F00E2BF99 /* theme5.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme5.jpg; sourceTree = "<group>"; };
+		597FD97621E0531F00E2BF99 /* theme12.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme12.jpg; sourceTree = "<group>"; };
+		597FD97721E0531F00E2BF99 /* theme3.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme3.jpg; sourceTree = "<group>"; };
+		597FD97921E0532000E2BF99 /* theme9.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme9.jpg; sourceTree = "<group>"; };
+		597FD98A21E05F2400E2BF99 /* theme11.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme11.jpg; sourceTree = "<group>"; };
+		597FD99821E05F5700E2BF99 /* theme16.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme16.jpg; sourceTree = "<group>"; };
+		597FD99A21E05F5700E2BF99 /* theme15.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme15.jpg; sourceTree = "<group>"; };
+		597FD99B21E05F5700E2BF99 /* theme14.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme14.jpg; sourceTree = "<group>"; };
+		597FD99D21E05F5700E2BF99 /* theme17.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme17.jpg; sourceTree = "<group>"; };
+		597FD9A421E07F5600E2BF99 /* theme13.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme13.jpg; sourceTree = "<group>"; };
+		597FD9A621E07FE000E2BF99 /* theme18.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme18.jpg; sourceTree = "<group>"; };
+		597FD9A821E0807B00E2BF99 /* theme10.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme10.jpg; sourceTree = "<group>"; };
+		597FD9AA21E0814900E2BF99 /* theme4.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme4.jpg; sourceTree = "<group>"; };
+		597FD9AC21E0818400E2BF99 /* theme19.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme19.jpg; sourceTree = "<group>"; };
+		597FD9AE21E0827A00E2BF99 /* theme6.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme6.jpg; sourceTree = "<group>"; };
+		597FD9AF21E0827A00E2BF99 /* theme1.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme1.jpg; sourceTree = "<group>"; };
+		597FD9B021E0827B00E2BF99 /* theme7.jpg */ = {isa = PBXFileReference; lastKnownFileType = image.jpeg; path = theme7.jpg; sourceTree = "<group>"; };
 		BCF9552BB303D5EE4724677F /* Pods_DQM_ReaderBooks.framework */ = {isa = PBXFileReference; explicitFileType = wrapper.framework; includeInIndex = 0; path = Pods_DQM_ReaderBooks.framework; sourceTree = BUILT_PRODUCTS_DIR; };
 /* End PBXFileReference section */
 
@@ -366,6 +412,7 @@
 		597FD8FD21DDE07000E2BF99 /* Category */ = {
 			isa = PBXGroup;
 			children = (
+				597FD96621DF5DE600E2BF99 /* UIColor */,
 				597FD8FE21DDE07000E2BF99 /* UIWindow */,
 				597FD90121DDE07000E2BF99 /* UIButton */,
 				597FD90421DDE07000E2BF99 /* UIView */,
@@ -397,10 +444,12 @@
 		597FD90421DDE07000E2BF99 /* UIView */ = {
 			isa = PBXGroup;
 			children = (
-				597FD90521DDE07000E2BF99 /* UIView+GestureCallback.m */,
-				597FD90621DDE07000E2BF99 /* UIView+DQMFrame.m */,
 				597FD90721DDE07000E2BF99 /* UIView+DQMFrame.h */,
+				597FD90621DDE07000E2BF99 /* UIView+DQMFrame.m */,
 				597FD90821DDE07000E2BF99 /* UIView+GestureCallback.h */,
+				597FD90521DDE07000E2BF99 /* UIView+GestureCallback.m */,
+				597FD96B21DF5F1D00E2BF99 /* UIView+Gradient.h */,
+				597FD96A21DF5F1D00E2BF99 /* UIView+Gradient.m */,
 			);
 			path = UIView;
 			sourceTree = "<group>";
@@ -452,6 +501,7 @@
 		597FD93B21DDE55A00E2BF99 /* DQMReader */ = {
 			isa = PBXGroup;
 			children = (
+				597FD96D21E0530300E2BF99 /* ReaderBackGroundImage */,
 				597FD94621DDFC4E00E2BF99 /* DQMReaderTools */,
 				597FD94721DDFC6100E2BF99 /* DQMReaderModel */,
 				597FD94C21DDFF0D00E2BF99 /* DQMReaderView */,
@@ -507,6 +557,42 @@
 				597FD95721DE05DB00E2BF99 /* DQMPageDirectoryView.m */,
 			);
 			path = DQMReaderView;
+			sourceTree = "<group>";
+		};
+		597FD96621DF5DE600E2BF99 /* UIColor */ = {
+			isa = PBXGroup;
+			children = (
+				597FD96721DF5DFE00E2BF99 /* UIColor+HexString.h */,
+				597FD96821DF5DFE00E2BF99 /* UIColor+HexString.m */,
+			);
+			path = UIColor;
+			sourceTree = "<group>";
+		};
+		597FD96D21E0530300E2BF99 /* ReaderBackGroundImage */ = {
+			isa = PBXGroup;
+			children = (
+				597FD97221E0531F00E2BF99 /* theme0.jpg */,
+				597FD9AF21E0827A00E2BF99 /* theme1.jpg */,
+				597FD96E21E0531E00E2BF99 /* theme2.jpg */,
+				597FD97721E0531F00E2BF99 /* theme3.jpg */,
+				597FD9AA21E0814900E2BF99 /* theme4.jpg */,
+				597FD97421E0531F00E2BF99 /* theme5.jpg */,
+				597FD9AE21E0827A00E2BF99 /* theme6.jpg */,
+				597FD9B021E0827B00E2BF99 /* theme7.jpg */,
+				597FD96F21E0531E00E2BF99 /* theme8.jpg */,
+				597FD97921E0532000E2BF99 /* theme9.jpg */,
+				597FD9A821E0807B00E2BF99 /* theme10.jpg */,
+				597FD98A21E05F2400E2BF99 /* theme11.jpg */,
+				597FD97621E0531F00E2BF99 /* theme12.jpg */,
+				597FD9A421E07F5600E2BF99 /* theme13.jpg */,
+				597FD99B21E05F5700E2BF99 /* theme14.jpg */,
+				597FD99A21E05F5700E2BF99 /* theme15.jpg */,
+				597FD99821E05F5700E2BF99 /* theme16.jpg */,
+				597FD99D21E05F5700E2BF99 /* theme17.jpg */,
+				597FD9A621E07FE000E2BF99 /* theme18.jpg */,
+				597FD9AC21E0818400E2BF99 /* theme19.jpg */,
+			);
+			path = ReaderBackGroundImage;
 			sourceTree = "<group>";
 		};
 		6A66DC4FDC93B3D63BD5690A /* Frameworks */ = {
@@ -633,10 +719,30 @@
 			isa = PBXResourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				597FD9B321E0827B00E2BF99 /* theme7.jpg in Resources */,
+				597FD99E21E05F5700E2BF99 /* theme16.jpg in Resources */,
+				597FD9B221E0827B00E2BF99 /* theme1.jpg in Resources */,
+				597FD98521E0532000E2BF99 /* theme3.jpg in Resources */,
+				597FD98021E0532000E2BF99 /* theme0.jpg in Resources */,
+				597FD9A021E05F5700E2BF99 /* theme15.jpg in Resources */,
+				597FD99121E05F2500E2BF99 /* theme11.jpg in Resources */,
 				597FD8A321DDDFE700E2BF99 /* LaunchScreen.storyboard in Resources */,
+				597FD97D21E0532000E2BF99 /* theme8.jpg in Resources */,
+				597FD9AB21E0814900E2BF99 /* theme4.jpg in Resources */,
+				597FD9A121E05F5700E2BF99 /* theme14.jpg in Resources */,
+				597FD98421E0532000E2BF99 /* theme12.jpg in Resources */,
+				597FD9A721E07FE100E2BF99 /* theme18.jpg in Resources */,
+				597FD9A321E05F5700E2BF99 /* theme17.jpg in Resources */,
 				597FD8A021DDDFE700E2BF99 /* Assets.xcassets in Resources */,
+				597FD98221E0532000E2BF99 /* theme5.jpg in Resources */,
+				597FD98721E0532000E2BF99 /* theme9.jpg in Resources */,
+				597FD9A521E07F5600E2BF99 /* theme13.jpg in Resources */,
 				597FD93A21DDE23000E2BF99 /* 龙王传说.txt in Resources */,
 				597FD93221DDE07000E2BF99 /* DqmBaseAssets.xcassets in Resources */,
+				597FD9A921E0807B00E2BF99 /* theme10.jpg in Resources */,
+				597FD9AD21E0818400E2BF99 /* theme19.jpg in Resources */,
+				597FD9B121E0827B00E2BF99 /* theme6.jpg in Resources */,
+				597FD97C21E0532000E2BF99 /* theme2.jpg in Resources */,
 				597FD89E21DDDFE600E2BF99 /* Main.storyboard in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -747,11 +853,13 @@
 				597FD92221DDE07000E2BF99 /* DQMListExpendHeaderView.m in Sources */,
 				597FD92C21DDE07000E2BF99 /* UIButton+DQM.m in Sources */,
 				597FD92621DDE07000E2BF99 /* DQMTeam.m in Sources */,
+				597FD96921DF5DFE00E2BF99 /* UIColor+HexString.m in Sources */,
 				597FD8A621DDDFE700E2BF99 /* main.m in Sources */,
 				597FD91321DDE07000E2BF99 /* DQMTabBarController.m in Sources */,
 				597FD93E21DDE58E00E2BF99 /* DQMFileTools.m in Sources */,
 				597FD92921DDE07000E2BF99 /* QMSGeneralHelpers.m in Sources */,
 				597FD89821DDDFE600E2BF99 /* AppDelegate.m in Sources */,
+				597FD96C21DF5F1D00E2BF99 /* UIView+Gradient.m in Sources */,
 				597FD91A21DDE07000E2BF99 /* DQMTextViewController.m in Sources */,
 				597FD92021DDE07000E2BF99 /* DQMLabelSizeToFitInTableViewCell.m in Sources */,
 				597FD92B21DDE07000E2BF99 /* UIWindow+CurrentViewController.m in Sources */,

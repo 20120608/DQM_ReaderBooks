@@ -158,6 +158,7 @@
   self.listView.list = self.list;
   //加载第一章文字
   [self loadChapterContentWithIndex:_currentChapter];
+	NSLog(@"55555");
 }
 
 /**
@@ -195,6 +196,8 @@
     {
       break;
     }
+	  NSLog(@"rang = %lu  i = %d",(unsigned long)rang.length,i);
+
     NSString *str = [contentString substringWithRange:rang];
     NSMutableAttributedString *attstr = [[NSMutableAttributedString alloc]initWithString:str attributes:textAttribute];
     [pageArray addObject:attstr];

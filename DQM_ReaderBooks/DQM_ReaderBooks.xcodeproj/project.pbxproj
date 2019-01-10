@@ -7,6 +7,7 @@
 	objects = {
 
 /* Begin PBXBuildFile section */
+		551A09A721E7596000B2FB84 /* 龙王传说.txt in Resources */ = {isa = PBXBuildFile; fileRef = 551A09A621E7596000B2FB84 /* 龙王传说.txt */; };
 		597FD89821DDDFE600E2BF99 /* AppDelegate.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD89721DDDFE600E2BF99 /* AppDelegate.m */; };
 		597FD89B21DDDFE600E2BF99 /* ViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD89A21DDDFE600E2BF99 /* ViewController.m */; };
 		597FD89E21DDDFE600E2BF99 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 597FD89C21DDDFE600E2BF99 /* Main.storyboard */; };
@@ -48,7 +49,6 @@
 		597FD93121DDE07000E2BF99 /* UINavigationController+FDFullscreenPopGesture.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD91121DDE07000E2BF99 /* UINavigationController+FDFullscreenPopGesture.m */; };
 		597FD93221DDE07000E2BF99 /* DqmBaseAssets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 597FD91221DDE07000E2BF99 /* DqmBaseAssets.xcassets */; };
 		597FD93721DDE13400E2BF99 /* BooksListViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD93621DDE13400E2BF99 /* BooksListViewController.m */; };
-		597FD93A21DDE23000E2BF99 /* 龙王传说.txt in Resources */ = {isa = PBXBuildFile; fileRef = 597FD93921DDE23000E2BF99 /* 龙王传说.txt */; };
 		597FD93E21DDE58E00E2BF99 /* DQMFileTools.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD93D21DDE58E00E2BF99 /* DQMFileTools.m */; };
 		597FD94221DDF64100E2BF99 /* DCBookModel.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD94121DDF64100E2BF99 /* DCBookModel.m */; };
 		597FD94521DDFC4600E2BF99 /* DQMReaderPageViewController.m in Sources */ = {isa = PBXBuildFile; fileRef = 597FD94421DDFC4600E2BF99 /* DQMReaderPageViewController.m */; };
@@ -106,6 +106,7 @@
 /* Begin PBXFileReference section */
 		1EA8076235EF092FD3CDFAEA /* Pods-DQM_ReaderBooks.release.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DQM_ReaderBooks.release.xcconfig"; path = "Pods/Target Support Files/Pods-DQM_ReaderBooks/Pods-DQM_ReaderBooks.release.xcconfig"; sourceTree = "<group>"; };
 		37262E829D7596DE8B2AD4A1 /* Pods-DQM_ReaderBooks.debug.xcconfig */ = {isa = PBXFileReference; includeInIndex = 1; lastKnownFileType = text.xcconfig; name = "Pods-DQM_ReaderBooks.debug.xcconfig"; path = "Pods/Target Support Files/Pods-DQM_ReaderBooks/Pods-DQM_ReaderBooks.debug.xcconfig"; sourceTree = "<group>"; };
+		551A09A621E7596000B2FB84 /* 龙王传说.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "龙王传说.txt"; sourceTree = "<group>"; };
 		597FD89321DDDFE600E2BF99 /* DQM_ReaderBooks.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = DQM_ReaderBooks.app; sourceTree = BUILT_PRODUCTS_DIR; };
 		597FD89621DDDFE600E2BF99 /* AppDelegate.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = AppDelegate.h; sourceTree = "<group>"; };
 		597FD89721DDDFE600E2BF99 /* AppDelegate.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = AppDelegate.m; sourceTree = "<group>"; };
@@ -189,7 +190,6 @@
 		597FD93321DDE08D00E2BF99 /* PrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = PrefixHeader.pch; sourceTree = "<group>"; };
 		597FD93521DDE13400E2BF99 /* BooksListViewController.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = BooksListViewController.h; sourceTree = "<group>"; };
 		597FD93621DDE13400E2BF99 /* BooksListViewController.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = BooksListViewController.m; sourceTree = "<group>"; };
-		597FD93921DDE23000E2BF99 /* 龙王传说.txt */ = {isa = PBXFileReference; fileEncoding = 4; lastKnownFileType = text; path = "龙王传说.txt"; sourceTree = "<group>"; };
 		597FD93C21DDE58E00E2BF99 /* DQMFileTools.h */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMFileTools.h; sourceTree = "<group>"; };
 		597FD93D21DDE58E00E2BF99 /* DQMFileTools.m */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.objc; path = DQMFileTools.m; sourceTree = "<group>"; };
 		597FD93F21DDE7BE00E2BF99 /* DQMReaderPrefixHeader.pch */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.c.h; path = DQMReaderPrefixHeader.pch; sourceTree = "<group>"; };
@@ -497,7 +497,7 @@
 		597FD93821DDE21800E2BF99 /* Resource */ = {
 			isa = PBXGroup;
 			children = (
-				597FD93921DDE23000E2BF99 /* 龙王传说.txt */,
+				551A09A621E7596000B2FB84 /* 龙王传说.txt */,
 			);
 			path = Resource;
 			sourceTree = "<group>";
@@ -755,11 +755,11 @@
 				597FD98221E0532000E2BF99 /* theme5.jpg in Resources */,
 				597FD98721E0532000E2BF99 /* theme9.jpg in Resources */,
 				597FD9A521E07F5600E2BF99 /* theme13.jpg in Resources */,
-				597FD93A21DDE23000E2BF99 /* 龙王传说.txt in Resources */,
 				597FD93221DDE07000E2BF99 /* DqmBaseAssets.xcassets in Resources */,
 				597FD9A921E0807B00E2BF99 /* theme10.jpg in Resources */,
 				597FD9AD21E0818400E2BF99 /* theme19.jpg in Resources */,
 				597FD9B121E0827B00E2BF99 /* theme6.jpg in Resources */,
+				551A09A721E7596000B2FB84 /* 龙王传说.txt in Resources */,
 				597FD97C21E0532000E2BF99 /* theme2.jpg in Resources */,
 				597FD89E21DDDFE600E2BF99 /* Main.storyboard in Resources */,
 			);
@@ -1073,15 +1073,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WZ4NSUVL67;
-				GCC_PREFIX_HEADER = /Users/piaoduwang/Desktop/DQM_ReaderBooks/DQM_ReaderBooks/DQM_ReaderBooks/PrefixHeader.pch;
+				DEVELOPMENT_TEAM = 4A6RMPCXH3;
+				GCC_PREFIX_HEADER = /Users/daiqiuming/Desktop/DQM_ReaderBooks/DQM_ReaderBooks/DQM_ReaderBooks/PrefixHeader.pch;
 				INFOPLIST_FILE = DQM_ReaderBooks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.piaoduwang.ReaderBooks.DQM-ReaderBooks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pdw.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
@@ -1093,15 +1093,15 @@
 			buildSettings = {
 				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
 				CODE_SIGN_STYLE = Automatic;
-				DEVELOPMENT_TEAM = WZ4NSUVL67;
-				GCC_PREFIX_HEADER = /Users/piaoduwang/Desktop/DQM_ReaderBooks/DQM_ReaderBooks/DQM_ReaderBooks/PrefixHeader.pch;
+				DEVELOPMENT_TEAM = 4A6RMPCXH3;
+				GCC_PREFIX_HEADER = /Users/daiqiuming/Desktop/DQM_ReaderBooks/DQM_ReaderBooks/DQM_ReaderBooks/PrefixHeader.pch;
 				INFOPLIST_FILE = DQM_ReaderBooks/Info.plist;
 				IPHONEOS_DEPLOYMENT_TARGET = 9.0;
 				LD_RUNPATH_SEARCH_PATHS = (
 					"$(inherited)",
 					"@executable_path/Frameworks",
 				);
-				PRODUCT_BUNDLE_IDENTIFIER = "com.piaoduwang.ReaderBooks.DQM-ReaderBooks";
+				PRODUCT_BUNDLE_IDENTIFIER = com.pdw.test;
 				PRODUCT_NAME = "$(TARGET_NAME)";
 				TARGETED_DEVICE_FAMILY = "1,2";
 			};
